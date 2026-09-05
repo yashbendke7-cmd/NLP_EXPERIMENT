@@ -1,100 +1,68 @@
-NLP Experiments
+# 🎓 AI College Notice Analyzer
 
-Small Natural Language Processing experiments using Python.
+A small NLP/AI project that analyzes college notices and extracts useful information automatically.
 
-About
+## Features
 
-This repository contains three basic Natural Language Processing experiments implemented using Python.
+- 📌 Notice category detection
+- 📅 Deadline/date extraction
+- ⏰ Time extraction
+- ⚠️ Priority detection
+- 📝 Simple extractive summary
+- 🔑 Important keyword extraction
+- 🌐 Streamlit web interface
 
-Technologies Used
+## Categories
+
+The analyzer can identify notices related to:
+- Placement
+- Exam
+- Internship
+- Scholarship
+- Event
+- Assignment
+- General Notice
+
+## Technologies Used
 
 - Python
-- NLTK
-- TextBlob
-- Scikit-learn
+- NLP concepts
+- Regular Expressions
+- Streamlit
 
-Experiments
+## Installation
 
-1. Text Preprocessing
+```bash
+pip install -r requirements.txt
+```
 
-Aim: To preprocess text using basic NLP techniques.
+## Run the Project
 
-Techniques used:
+```bash
+streamlit run app.py
+```
 
-- Lowercase conversion
-- Tokenization
-- Stop-word removal
-- Stemming
+## Example Input
 
-File: "Text_preprocessing.py"
+TCS campus placement registration is open for eligible students. Last date is 15 September 2026 at 5:00 PM.
 
----
+## Example Output
 
-2. Sentiment Analysis
+- Category: Placement
+- Priority: HIGH
+- Deadline: 15 September 2026
+- Time: 5:00 PM
+- Keywords: placement, registration, tcs, campus
 
-Aim: To identify whether a sentence is Positive, Negative, or Neutral.
+## Project Structure
 
-Method: TextBlob is used to calculate the sentiment polarity of the given text.
-
-File: "Sentiment_analysis.py"
-
-Example:
-
-Input:
-
-I love this movie
-
-Output:
-
-Sentiment: Positive
-
----
-
-3. Spam Message Detection
-
-Aim: To classify a message as Spam or Not Spam.
-
-Method:
-
-- Count Vectorization
-- Multinomial Naive Bayes
-
-File: "spam_detection.py"
-
-Example:
-
-Input:
-
-Congratulations you won a lottery
-
-Output:
-
-Prediction: Spam
-
-Requirements
-
-Install the required libraries:
-
-pip install nltk textblob scikit-learn
-
-Repository Structure
-
-NLP_EXPERIMENT/
-│
-├── Text_preprocessing.py
-├── Sentiment_analysis.py
-├── spam_detection.py
+```text
+AI_College_Notice_Analyzer/
+├── app.py
+├── notice_analyzer.py
+├── preprocessing.py
+├── requirements.txt
 ├── README.md
-└── .gitignore
-
-Learning Outcomes
-
-- Understand basic NLP concepts
-- Perform text preprocessing
-- Perform sentiment analysis
-- Perform text classification
-- Use Python NLP libraries
-
-Conclusion
-
-These experiments provide a basic understanding of Natural Language Processing and demonstrate how Python can be used to process and analyze human language.
+└── sample_notices/
+    └── placement_notice.txt
+```
